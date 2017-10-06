@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <wallet>
+                <model>Intex\Wallet\Model\Wallet</model>
+                <title>Wallet</title>
+                <!--<service_provider>wallet_paisa</service_provider>
+                <production_url>https://walletapi.mobikwik.com/wallet</production_url>
+                <sandbox_url>https://test.mobikwik.com/wallet</sandbox_url>
+                <environment>sandbox</environment>
+                <account_type>walletmoney</account_type>-->
+                <redirect_url>wallet/standard/redirect</redirect_url>
+                <return_url>wallet/standard/response</return_url>
+                <cancel_url>wallet/standard/cancel</cancel_url>
+                <merchant_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <salt backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+            </wallet>
+        </payment>
+    </default>
+</config>
